@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    display: flex;
+}
+
+header {
+    background-color: #333;
+    color: white;
+}
+
+nav {
+    background: #222;
+    color: white;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+}
+
+nav h2 {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.juego {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.juego-container {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    margin: 15px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.juego img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.juego h3 {
+    margin: 0;
+}
+
+.juego a {
+    margin-left: auto;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.top-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;  
+    margin-bottom: 20px;
+    margin-left: 150px;
+    width: 100%;   
+    max-width: 800px; 
+}
+
+.search-bar input {
+    flex: 1;       
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background: #eee;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
