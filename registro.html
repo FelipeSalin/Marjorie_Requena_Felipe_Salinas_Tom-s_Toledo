@@ -32,31 +32,37 @@
                             <div class="mb-3">
                                 <label for="" class="form-label">Nombre Completo (*)</label>
                                 <input type="text" class="form-control" name="nombre" id="nombre">
+                                <small class="text-danger" id="nombre-error"></small>
                             </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Nombre de Usuario (*)</label>
                                 <input type="text" class="form-control" name="usuario" id="usuario">
+                                <small class="text-danger" id="usuario-error"></small>
                             </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Correo Electrónico (*)</label>
                                 <input type="text" class="form-control" name="mail" id="mail">
+                                <small class="text-danger" id="mail-error"></small>
                             </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Contraseña (*)</label>
                                 <input type="text" class="form-control" name="pass" id="pass">
+                                <small class="text-danger" id="pass-error"></small>
                             </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Repita Contraseña (*)</label>
                                 <input type="text" class="form-control" name="pass2" id="pass2">
+                                <small class="text-danger" id="pass2-error"></small>
                             </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Fecha de Nacimiento (*)</label>
                                 <input type="date" class="form-control" name="fecha" id="fecha">
+                                <small class="text-danger" id="fecha-error"></small>
                             </div>
 
                             <div class="mb-3">
@@ -64,7 +70,7 @@
                                 <input type="text" class="form-control" name="domicilio" id="domicilio">
                             </div>
 
-                            (*) = Obligatorio
+                            (*) = Campo Obligatorio
 
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">Registrar Usuario</button>
@@ -82,9 +88,53 @@
 
     <script>
         const form = document.getElementById('formulario_registro');
+
+        const nombreInput = document.getElementById('nombre');
+        const usuarioInput = document.getElementById('usuario');
+        const correoInput = document.getElementById('mail');
+        const contrasennaInput = document.getElementById('pass');
+        const contrasenna2Input = document.getElementById('pass2');
+        const fechaInput = document.getElementById('fecha');
+
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
+            document.getElementById('nombre-error').innerHTML = '';
+            document.getElementById('usuario-error').innerHTML = '';
+            document.getElementById('mail-error').innerHTML = '';
+            document.getElementById('pass-error').innerHTML = '';
+            document.getElementById('pass2-error').innerHTML = '';
+            document.getElementById('fecha-error').innerHTML = '';
+
+            if(nombreInput.value === '') {
+                document.getElementById('nombre-error').innerHTML = 'Por favor, ingresa un nombre válido';
+                return;
+            }
+
+            if(usuarioInput.value === '') {
+                document.getElementById('usuario-error').innerHTML = 'Por favor, ingresa un nombre de usuario válido';
+                return;
+            }
+
+            if(correoInput.value === '') {
+                document.getElementById('mail-error').innerHTML = 'Por favor, ingresa un correo válido';
+                return;
+            }
+
+            if(contrasennaInput.value === '') {
+                document.getElementById('pass-error').innerHTML = 'Por favor, ingresa una contraseña válida';
+                return;
+            }
+
+            if(contrasenna2Input.value === contrasennaInput.value) {
+                document.getElementById('pass2-error').innerHTML = 'La contraseña debe ser igual a la anterior';
+                return;
+            }
+
+            if(fechaInput.value === '') {
+                document.getElementById('fecha-error').innerHTML = 'Por favor, ingresa una fecha válida';
+                return;
+            }
             alert('formulario');
 
             form.submit();
