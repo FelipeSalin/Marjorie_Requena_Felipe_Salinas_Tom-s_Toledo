@@ -1,122 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SercoGames</title>
-        <link rel="stylesheet" href="/css/styles.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SercoGames</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-    <body>
-        <header>
+</head>
+
+<body>
+    <header>
+        <nav>
             <a href="/index.html">
-                <img src="/assets/images/Empresa.jpg" width="240" alt="">
-                <h1 style="margin-left: 5px; color: antiquewhite;"><strong>SercoGames</strong></h1>
+                <img src="/assets/images/Empresa.jpg" width="180" alt="">
+                <h3 style="color: rgb(153, 132, 104);"><strong>SercoGames</strong></h3>
             </a>
-            <nav>
-                <div class="header">Categorías</div>
-                <ul>
-                    <li><a href="/main/index.html">Todos</a></li>
-                    <li><a href="/assets/category/suspenso.html">Suspenso</a></li>
-                    <li><a href="/assets/category/mundo-abierto.html">Mundo Abierto</a></li>
-                    <li><a href="/assets/category/supervivencia.html">Supervivencia</a></li>
-                    <li><a href="/assets/category/accion.html">Acción</a></li>
-                    <li><a href="/assets/category/rol.html">Rol</a></li>
-                </ul>
-            </nav>
-        </header>
+            <a href="/registro.html" style="color:rgb(235, 185, 93);"><strong>Registrate acá</strong></a>
+            <div class="header" style="margin-top: 30px;">Categorías</div>
+            <ul>
+                <li><a href="/main/index.html">Todos</a></li>
+                <li><a href="/assets/category/suspenso.html">Suspenso</a></li>
+                <li><a href="/assets/category/mundo-abierto.html">Mundo Abierto</a></li>
+                <li><a href="/assets/category/supervivencia.html">Supervivencia</a></li>
+                <li><a href="/assets/category/accion.html">Acción</a></li>
+                <li><a href="/assets/category/rol.html">Rol</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section class="juego-container">
-            <div class="top-bar">
-                <h1>Catálogo Completo</h1>
+    <section class="juego-container">
+        <div class="top-bar">
+            <h1>Catálogo Completo</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar">
+            <button>Buscar</button>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/accion/gta5.JPG" alt="GTA V">
+            <div class="info">
+                <h3>GTA V</h3>
+                <p>CLP$ 26.990</p>
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar">
-                <button>Buscar</button>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/accion/cyberpunk.jpg" alt="Cyberpunk 2077">
+            <div class="info">
+                <h3>Cyberpunk 2077</h3>
+                <p>CLP$ 39.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/accion/gta5.JPG" alt="GTA V">
-                <div class="info">
-                    <h3>GTA V</h3>
-                    <p>CLP$ 26.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/suspenso/resident-evil-4.jpg" alt="Resident Evil 4">
+            <div class="info">
+                <h3>Resident Evil 4</h3>
+                <p>CLP$ 13.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/accion/cyberpunk.jpg" alt="Cyberpunk 2077">
-                <div class="info">
-                    <h3>Cyberpunk 2077</h3>
-                    <p>CLP$ 39.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/suspenso/silent-hill-2.jpg" alt="Silent Hill 2">
+            <div class="info">
+                <h3>Silent Hill 2</h3>
+                <p>CLP$ 49.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/suspenso/resident-evil-4.jpg" alt="Resident Evil 4">
-                <div class="info">
-                    <h3>Resident Evil 4</h3>
-                    <p>CLP$ 13.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/supervivencia/dont-starve.JPG" alt="Don't Starve Together">
+            <div class="info">
+                <h3>Don't Starve Together</h3>
+                <p>CLP$ 5.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/suspenso/silent-hill-2.jpg" alt="Silent Hill 2">
-                <div class="info">
-                    <h3>Silent Hill 2</h3>
-                    <p>CLP$ 49.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/supervivencia/peak.JPG" alt="PEAK">
+            <div class="info">
+                <h3>PEAK</h3>
+                <p>CLP$ 9.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/supervivencia/dont-starve.JPG" alt="Don't Starve Together">
-                <div class="info">
-                    <h3>Don't Starve Together</h3>
-                    <p>CLP$ 5.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/rol/baldurs-gate-3.JPG" alt="Baldur's Gate III">
+            <div class="info">
+                <h3>Baldur's Gate III</h3>
+                <p>CLP$ 39.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/supervivencia/peak.JPG" alt="PEAK">
-                <div class="info">
-                    <h3>PEAK</h3>
-                    <p>CLP$ 9.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/rol/expedition-33.JPG" alt="Clair Obscur: Expedition 33">
+            <div class="info">
+                <h3>Clair Obscur: Expedition 33</h3>
+                <p>CLP$ 33.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/rol/baldurs-gate-3.JPG" alt="Baldur's Gate III">
-                <div class="info">
-                    <h3>Baldur's Gate III</h3>
-                    <p>CLP$ 39.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/mundo-abierto/elden-ring.JPG" alt="Elden Ring">
+            <div class="info">
+                <h3>Elden Ring</h3>
+                <p>CLP$ 44.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/rol/expedition-33.JPG" alt="Clair Obscur: Expedition 33">
-                <div class="info">
-                    <h3>Clair Obscur: Expedition 33</h3>
-                    <p>CLP$ 33.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
+            <a href="#">Ver Detalles</a>
+        </div>
+        <div class="juego">
+            <img src="/assets/images/mundo-abierto/metal-gear-solid-5.jpg" alt="Metal Gear Solid V">
+            <div class="info">
+                <h3>Metal Gear Solid V</h3>
+                <p>CLP$ 22.990</p>
             </div>
-            <div class="juego">
-                <img src="/assets/images/mundo-abierto/elden-ring.JPG" alt="Elden Ring">
-                <div class="info">
-                    <h3>Elden Ring</h3>
-                    <p>CLP$ 44.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
-            </div>
-            <div class="juego">
-                <img src="/assets/images/mundo-abierto/metal-gear-solid-5.jpg" alt="Metal Gear Solid V">
-                <div class="info">
-                    <h3>Metal Gear Solid V</h3>
-                    <p>CLP$ 22.990</p>
-                </div>
-                <a href="#">Ver Detalles</a>
-            </div>
-        </section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    </body>
+            <a href="#">Ver Detalles</a>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <footer>
+        <p>Todos los derechos reservados. SercoGames &copy, 2025</p>
+    </footer>
+</body>
+
 </html>
