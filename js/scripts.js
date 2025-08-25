@@ -1,0 +1,56 @@
+
+
+<script>
+    const form = document.getElementById('formulario_registro');
+
+    const nombreInput = document.getElementById('nombre');
+    const usuarioInput = document.getElementById('usuario');
+    const correoInput = document.getElementById('mail');
+    const contrasennaInput = document.getElementById('pass');
+    const contrasenna2Input = document.getElementById('pass2');
+    const fechaInput = document.getElementById('fecha');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+    document.getElementById('nombre-error').innerHTML = '';
+    document.getElementById('usuario-error').innerHTML = '';
+    document.getElementById('mail-error').innerHTML = '';
+    document.getElementById('pass-error').innerHTML = '';
+    document.getElementById('pass2-error').innerHTML = '';
+    document.getElementById('fecha-error').innerHTML = '';
+
+    if(nombreInput.value === '') {
+        document.getElementById('nombre-error').innerHTML = 'Por favor, ingresa un nombre válido';
+    return;
+            }
+
+    if(usuarioInput.value === '') {
+        document.getElementById('usuario-error').innerHTML = 'Por favor, ingresa un nombre de usuario válido';
+    return;
+            }
+
+    if(correoInput.value === '') {
+        document.getElementById('mail-error').innerHTML = 'Por favor, ingresa un correo válido';
+    return;
+            }
+
+    if(contrasennaInput.value === '') {
+        document.getElementById('pass-error').innerHTML = 'Por favor, ingresa una contraseña válida';
+    return;
+            }
+
+    if(contrasenna2Input.value === contrasennaInput.value) {
+        document.getElementById('pass2-error').innerHTML = 'La contraseña debe ser igual a la anterior';
+    return;
+            }
+
+    if(fechaInput.value === '') {
+        document.getElementById('fecha-error').innerHTML = 'Por favor, ingresa una fecha válida';
+    return;
+            }
+    alert('formulario');
+
+    form.submit();
+        });
+</script>
