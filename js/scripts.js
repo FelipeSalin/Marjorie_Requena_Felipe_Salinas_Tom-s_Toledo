@@ -43,7 +43,7 @@ form.addEventListener('submit', function (event) {
         return;
     }
 
-    if (contrasenna2Input.value === contrasennaInput.value) {
+    if (contrasenna2Input.value !== contrasennaInput.value) {
         document.getElementById('pass2-error').innerHTML = 'La contraseña debe ser igual a la anterior';
         return;
     }
