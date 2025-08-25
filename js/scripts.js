@@ -1,17 +1,14 @@
+const form = document.getElementById('formulario_registro');
 
+const nombreInput = document.getElementById('nombre');
+const usuarioInput = document.getElementById('usuario');
+const correoInput = document.getElementById('mail');
+const contrasennaInput = document.getElementById('pass');
+const contrasenna2Input = document.getElementById('pass2');
+const fechaInput = document.getElementById('fecha');
 
-<script>
-    const form = document.getElementById('formulario_registro');
-
-    const nombreInput = document.getElementById('nombre');
-    const usuarioInput = document.getElementById('usuario');
-    const correoInput = document.getElementById('mail');
-    const contrasennaInput = document.getElementById('pass');
-    const contrasenna2Input = document.getElementById('pass2');
-    const fechaInput = document.getElementById('fecha');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
     document.getElementById('nombre-error').innerHTML = '';
     document.getElementById('usuario-error').innerHTML = '';
@@ -20,37 +17,42 @@
     document.getElementById('pass2-error').innerHTML = '';
     document.getElementById('fecha-error').innerHTML = '';
 
-    if(nombreInput.value === '') {
+    if (nombreInput.value === '') {
         document.getElementById('nombre-error').innerHTML = 'Por favor, ingresa un nombre válido';
-    return;
-            }
+        return;
+    }
 
-    if(usuarioInput.value === '') {
+    if (usuarioInput.value === '') {
         document.getElementById('usuario-error').innerHTML = 'Por favor, ingresa un nombre de usuario válido';
-    return;
-            }
+        return;
+    }
 
-    if(correoInput.value === '') {
+    if (correoInput.value === '') {
         document.getElementById('mail-error').innerHTML = 'Por favor, ingresa un correo válido';
-    return;
-            }
+        return;
+    }
 
-    if(contrasennaInput.value === '') {
+    const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!mailRegex.test(correoInput.value)) {
+        document.getElementById('mail-error').innerHTML = 'El campo email debe tener un formato válido';
+        return;
+    }
+
+    if (contrasennaInput.value === '') {
         document.getElementById('pass-error').innerHTML = 'Por favor, ingresa una contraseña válida';
-    return;
-            }
+        return;
+    }
 
-    if(contrasenna2Input.value === contrasennaInput.value) {
+    if (contrasenna2Input.value === contrasennaInput.value) {
         document.getElementById('pass2-error').innerHTML = 'La contraseña debe ser igual a la anterior';
-    return;
-            }
+        return;
+    }
 
-    if(fechaInput.value === '') {
+    if (fechaInput.value === '') {
         document.getElementById('fecha-error').innerHTML = 'Por favor, ingresa una fecha válida';
-    return;
-            }
+        return;
+    }
     alert('formulario');
 
     form.submit();
-        });
-</script>
+});
