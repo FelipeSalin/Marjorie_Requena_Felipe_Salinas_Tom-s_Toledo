@@ -59,6 +59,15 @@ form.addEventListener('submit', function (event) {
         return;
     }
 
+    const fechaNacimiento = new Date(fechaInput.value);
+    const fechaHoy = new Date();
+    let edad = fechaHoy.getFullYear() - fechaNacimiento.getFullYear();
+
+    if (edad < 13) {
+        document.getElementById('fecha-error').innerHTML = 'Debes tener al menos 13 años para poder registrarte';
+        return;
+    }
+
     alert('¡Registrado Exitosamente!');
 
     form.submit();
