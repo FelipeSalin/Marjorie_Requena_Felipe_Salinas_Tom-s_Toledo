@@ -43,6 +43,12 @@ form.addEventListener('submit', function (event) {
         return;
     }
 
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,18}$/;
+    if (!mailRegex.test(contrasennaInput.value)) {
+        document.getElementById('pass-error').innerHTML = 'La contraseña debe tener de 6 a 18 caracteres, incluir al menos una mayúscula, un número y no contener caracteres especiales.';
+        return;
+    }
+
     if (contrasenna2Input.value !== contrasennaInput.value) {
         document.getElementById('pass2-error').innerHTML = 'La contraseña debe ser igual a la anterior';
         return;
