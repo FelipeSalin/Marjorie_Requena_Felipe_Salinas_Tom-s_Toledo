@@ -44,7 +44,7 @@ form.addEventListener('submit', function (event) {
     }
 
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,18}$/;
-    if (!mailRegex.test(contrasennaInput.value)) {
+    if (!passwordRegex.test(contrasennaInput.value)) {
         document.getElementById('pass-error').innerHTML = 'La contraseña debe tener de 6 a 18 caracteres, incluir al menos una mayúscula, un número y no contener caracteres especiales.';
         return;
     }
@@ -58,7 +58,8 @@ form.addEventListener('submit', function (event) {
         document.getElementById('fecha-error').innerHTML = 'Por favor, ingresa una fecha válida';
         return;
     }
-    alert('formulario');
+
+    alert('¡Registrado Exitosamente!');
 
     form.submit();
 });
